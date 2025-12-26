@@ -1,6 +1,7 @@
 package ru.mephi.abondarenko.test.mobile;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -11,6 +12,7 @@ import ru.mephi.abondarenko.test.mobile.common.extension.LocalMobileTestExtensio
 
 import static com.codeborne.selenide.Selenide.open;
 
+@Tag("mobile")
 @ExtendWith(LocalMobileTestExtension.class)
 public class WikiTests extends BaseWikiAndroidTest {
     private final OnboardingPage onboardingPage = new OnboardingPage();

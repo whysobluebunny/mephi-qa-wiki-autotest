@@ -1,5 +1,6 @@
 package ru.mephi.abondarenko.test.web;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -41,8 +42,10 @@ public class WikiTests {
 
     @Test
     public void testRandomPage() {
-        String title = wikiHomePage.navigateTo("Random article").getPageTitle().getText();
-        String secondTitle = wikiHomePage.navigateTo("Random article").getPageTitle().getText();
+        String title = wikiHomePage.navigateTo("Random article")
+                .getPageTitle().should(Condition.appear).getText();
+        String secondTitle = wikiHomePage.navigateTo("Random article")
+                .getPageTitle().should(Condition.appear).getText();
         Assertions.assertNotEquals(title, secondTitle);
     }
 }
