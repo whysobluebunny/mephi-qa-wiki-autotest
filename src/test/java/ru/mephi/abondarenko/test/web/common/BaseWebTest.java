@@ -3,7 +3,7 @@ package ru.mephi.abondarenko.test.web.common;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeEach;
 
-public class BaseWebDriverTest {
+public class BaseWebTest {
     @BeforeEach
     public void setUp() {
         Configuration.timeout = 20000;

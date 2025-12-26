@@ -108,12 +108,13 @@
                         <include>**/*Test.java</include>
                         <include>**/*Tests.java</include>
                     </includes>
-                    <properties>
-                        <configurationParameters>
-                            junit.jupiter.execution.parallel.enabled=true
-                            junit.jupiter.execution.parallel.mode.default=concurrent
-                        </configurationParameters>
-                    </properties>
+<!--                    пришлось убрать из-за appium тестов-->
+<!--                    <properties>-->
+<!--                        <configurationParameters>-->
+<!--                            junit.jupiter.execution.parallel.enabled=true-->
+<!--                            junit.jupiter.execution.parallel.mode.default=concurrent-->
+<!--                        </configurationParameters>-->
+<!--                    </properties>-->
                 </configuration>
                 <dependencies>
                     <dependency>

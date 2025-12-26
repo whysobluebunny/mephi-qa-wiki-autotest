@@ -9,9 +9,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import ru.mephi.abondarenko.data.pages.web.WikiHomePage;
+import ru.mephi.abondarenko.test.web.common.BaseWebTest;
 
 @Tag("web")
-public class WikiTests {
+public class WikiTests extends BaseWebTest {
     private final WikiHomePage wikiHomePage = new WikiHomePage();
 
     @BeforeEach
